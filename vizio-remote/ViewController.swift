@@ -41,6 +41,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBOutlet weak var searchField: UITextField!
+
     @IBAction func powerButton(_ sender: Any) {
         pressButton(
             session: URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil),
@@ -129,11 +131,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func test(_ sender: Any) {
-        let session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
-        goToApp(
-            session: session,
-            app: GlobalVar.CMD.APP.PRIME
-        )
     }
 }
 
