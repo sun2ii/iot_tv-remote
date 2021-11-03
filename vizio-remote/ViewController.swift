@@ -50,6 +50,36 @@ class ViewController: UIViewController {
         )
     }
     
+    @IBAction func prevButton(_ sender: Any) {
+        pressButton(
+            session: URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil),
+            cmd: GlobalVar.CMD.MAIN.PREV
+        )
+    }
+    
+    @IBAction func channelDown(_ sender: Any) {
+        pressButton(
+            session: URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil),
+            cmd: GlobalVar.CMD.BASIC.CHANNEL_DOWN
+        )
+    }
+    
+    
+    @IBAction func channelUp(_ sender: Any) {
+        pressButton(
+            session: URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil),
+            cmd: GlobalVar.CMD.BASIC.CHANNEL_UP
+        )
+    }
+    
+    
+    @IBAction func inputButton(_ sender: Any) {
+        pressButton(
+            session: URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil),
+            cmd: GlobalVar.CMD.MAIN.INPUT
+        )
+    }
+    
     @IBAction func navigateUpButton(_ sender: Any) {
         pressButton(
             session: URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil),
@@ -83,6 +113,29 @@ class ViewController: UIViewController {
             session: URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil),
             cmd: GlobalVar.CMD.MAIN.ENTER
         )
+    }
+    
+    @IBAction func settingsButton(_ sender: Any) {
+        pressButton(
+           session: URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil),
+            cmd: GlobalVar.CMD.MAIN.Settings
+       )
+    }
+    
+    
+    @IBAction func infoButton(_ sender: Any) {
+        pressButton(
+           session: URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil),
+            cmd: GlobalVar.CMD.MAIN.INFO
+        )
+    }
+    
+    
+    @IBAction func homeButton(_ sender: Any) {
+        pressButton(
+           session: URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil),
+            cmd: GlobalVar.CMD.MAIN.HOME
+       )
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -130,7 +183,12 @@ class ViewController: UIViewController {
         )
     }
     
+    // For Mute Button - Earlier was for testing
     @IBAction func test(_ sender: Any) {
+        pressButton(
+           session: URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil),
+            cmd: GlobalVar.CMD.MAIN.MUTE
+       )
     }
 }
 
